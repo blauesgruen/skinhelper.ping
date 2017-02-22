@@ -62,32 +62,38 @@ Anzahl der Server mit Offline Status / Count of offline servers:
 
     $INFO[Window(Home).Property(SkinHelperPING.serveroff)]
 
-==========================================================================
+Skinintegration / Skin integration
+----------------------------------
 
-Beispiel für das Hauptmenü:
+<b>Beispiel für die Implementation ins Hauptmenü / Example for implementation into the main menu:</b>
 
-Ausführen:
+Addon ausführen, das Addon wird dabei bei jedem Aufruf des Hauptmenüs gestartet / Runs the addon on every call of the main menu:
 
+```
 	<?xml version="1.0" encoding="UTF-8"?>
 	<window>
 		<defaultcontrol always="true">9000</defaultcontrol>
-		<onload condition="System.HasAddon(script.skinhelper.ping)">RunScript(script.skinhelper.ping)</onload> 		# startet das Script bei jedem Aufruf des Hauptmenüs
+		<onload condition="System.HasAddon(script.skinhelper.ping)">RunScript(script.skinhelper.ping)</onload>
 		<controls>
 		.
 		.
 		.
-		
-Darstellen per "Button", so kann noch ein "Label" integriert werden:
+```
+	
+Darstellung per Button, zusätzlich wird ein Label integriert. Die Grafik für den Button 'ServerIcon.png' muss in das 'media'-Verzeichnis des verwendeten Skins kopiert werden / Presentation via button and an additional label. The icon bitmap 'ServerIcon.png' must be copied into the 'media' folder of the actual used skin. 
 
+```
 	<control type="button">
 		<width>38</width>
 		<height>40</height>
 		<textoffsetx>0</textoffsetx>
 		<textwidht>40</textwidht>
-		<label>$INFO[Window(Home).Property(SkinHelperPING.serveron)]</label>										# "Label" - hier die Anzahl der Server die Online sind
-		<texturefocus>ServerIcon.png</texturefocus>																	# Grafik die dargestellt werden soll (fokus)
-		<texturenofocus>ServerIcon.png</texturenofocus>																# Grafik die dargestellt werden soll (nicht fokus)
-		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.servercount),0)</visible>					# sichtbar wenn es Einträge in den Einstellungen gibt
-		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.serveron),0)</visible>						# sichtbar wenn mind. 1 Server online ist
-		<visible>System.HasAddon(script.skinhelper.ping)</visible>													# sichtbar wenn das Script installiert ist
+		<label>$INFO[Window(Home).Property(SkinHelperPING.serveron)]</label>					    # "Label" - hier die Anzahl der Server die Online sind
+		<texturefocus>ServerIcon.png</texturefocus>													# Grafik die dargestellt werden soll (fokus)
+		<texturenofocus>ServerIcon.png</texturenofocus>												# Grafik die dargestellt werden soll (nicht fokus)
+		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.servercount),0)</visible>	# sichtbar wenn es Einträge in den Einstellungen gibt
+		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.serveron),0)</visible>		# sichtbar wenn mind. 1 Server online ist
+		<visible>System.HasAddon(script.skinhelper.ping)</visible>									# sichtbar wenn das Script installiert ist
 	</control>
+	
+```
