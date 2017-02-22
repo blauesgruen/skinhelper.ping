@@ -80,7 +80,7 @@ Addon ausführen, das Addon wird dabei bei jedem Aufruf des Hauptmenüs gestarte
 		.
 ```
 	
-Darstellung per Button, zusätzlich wird ein Label integriert. Die Grafik für den Button 'ServerIcon.png' kann im 'resources/media'-Verzeichnis des Addons ausgetauscht werden / Presentation via button and an additional label. The icon bitmap 'ServerIcon.png' can changed within the 'resources/media' folder of the addon: 
+Darstellung per Button, zusätzlich wird ein Label integriert. Die Grafik für den Button 'ServerIcon.png' kann muss aus dem 'resources/media'-Verzeichnis des Addons in das 'media'-Verzeichnis des verwendeten Skins kopiert werden. / Presentation via button and an additional label. The icon bitmap 'ServerIcon.png' within the 'resources/media' folder of the addon must copied into the 'media' folder of the used skin. 
 
 ```
 	<control type="button">
@@ -89,8 +89,8 @@ Darstellung per Button, zusätzlich wird ein Label integriert. Die Grafik für d
 		<textoffsetx>0</textoffsetx>
 		<textwidht>40</textwidht>
 		<label>$INFO[Window(Home).Property(SkinHelperPING.serveron)]</label>					    # "Label" - hier die Anzahl der Server die Online sind
-		<texturefocus>$INFO[Window(Home).Property(SkinHelperPING.icon)]</texturefocus>      		# Grafik die dargestellt werden soll (fokus)
-		<texturenofocus>$INFO[Window(Home).Property(SkinHelperPING.icon)]</texturenofocus>			# Grafik die dargestellt werden soll (nicht fokus)
+		<texturefocus>ServerIcon.png</texturefocus>      		                                    # Grafik die dargestellt werden soll (fokus)
+		<texturenofocus>ServerIcon.png</texturenofocus>			                                    # Grafik die dargestellt werden soll (nicht fokus)
 		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.servercount),0)</visible>	# sichtbar wenn es Einträge in den Einstellungen gibt
 		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.serveron),0)</visible>		# sichtbar wenn mind. 1 Server online ist
 		<visible>System.HasAddon(script.skinhelper.ping)</visible>									# sichtbar wenn das Script installiert ist
