@@ -16,7 +16,7 @@ msgstr ""
 
 msgctxt "#32002"
 msgid "Server 1"
-msgstr "Server 2"
+msgstr "Server 1"
 
 msgctxt "#32003"
 msgid "Server 2"
