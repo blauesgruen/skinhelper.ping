@@ -16,7 +16,7 @@ __addon_id__            = __addon__.getAddonInfo('id')
 __addonname__           = __addon__.getAddonInfo('name')
 __icon__                = __addon__.getAddonInfo('icon')
 __addonpath__           = xbmc.translatePath(__addon__.getAddonInfo('path')).decode('utf-8')
-__settings__            = xbmcaddon.Addon(id="script.skinhelper.PING")
+__settings__            = xbmcaddon.Addon(id="script.skinhelper.ping")
 WINDOW = xbmcgui.Window(10000)
 
 class MyAddon:
