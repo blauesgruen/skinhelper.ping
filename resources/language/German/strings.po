@@ -12,39 +12,39 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#English
+#German
 
 msgctxt "#32002"
 msgid "Server 1"
-msgstr ""
+msgstr "Server 2"
 
 msgctxt "#32003"
 msgid "Server 2"
-msgstr ""
+msgstr "Server 2"
 
 msgctxt "#32004"
 msgid "Server 3"
-msgstr ""
+msgstr "Server 3"
 
 msgctxt "#32005"
 msgid "Server 4"
-msgstr ""
+msgstr "Server 4"
 
 msgctxt "#32006"
 msgid "Server 5"
-msgstr ""
+msgstr "Server 5"
 
 msgctxt "#32007"
 msgid "Name of Server"
-msgstr ""
+msgstr "Bezeichnung des Servers"
 
 msgctxt "#32008"
 msgid "IP address"
-msgstr ""
+msgstr "IP-Adresse"
 
 msgctxt "#32009"
 msgid "MAC address"
-msgstr ""
+msgstr "MAC-Adresse"
 
 
 
