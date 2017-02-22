@@ -62,3 +62,32 @@ Anzahl der Server mit Offline Status / Count of offline servers:
 
     $INFO[Window(Home).Property(SkinHelperPING.serveroff)]
 
+==========================================================================
+
+Beispiel für das Hauptmenü:
+
+Ausführen:
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<window>
+		<defaultcontrol always="true">9000</defaultcontrol>
+		<onload condition="System.HasAddon(script.skinhelper.ping)">RunScript(script.skinhelper.ping)</onload> 		# startet das Script bei jedem Aufruf des Hauptmenüs
+		<controls>
+		.
+		.
+		.
+		
+Darstellen per "Button", so kann noch ein "Label" integriert werden:
+
+	<control type="button">
+		<width>38</width>
+		<height>40</height>
+		<textoffsetx>0</textoffsetx>
+		<textwidht>40</textwidht>
+		<label>$INFO[Window(Home).Property(SkinHelperPING.serveron)]</label>										# "Label" - hier die Anzahl der Server die Online sind
+		<texturefocus>ServerIcon.png</texturefocus>																	# Grafik die dargestellt werden soll (fokus)
+		<texturenofocus>ServerIcon.png</texturenofocus>																# Grafik die dargestellt werden soll (nicht fokus)
+		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.servercount),0)</visible>					# sichtbar wenn es Einträge in den Einstellungen gibt
+		<visible>Integer.IsGreater(Window(Home).Property(SkinHelperPING.serveron),0)</visible>						# sichtbar wenn mind. 1 Server online ist
+		<visible>System.HasAddon(script.skinhelper.ping)</visible>													# sichtbar wenn das Script installiert ist
+	</control>
