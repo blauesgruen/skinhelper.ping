@@ -16,7 +16,6 @@ __addon_id__            = __addon__.getAddonInfo('id')
 __addonname__           = __addon__.getAddonInfo('name')
 __icon__                = __addon__.getAddonInfo('icon')
 __addonpath__           = xbmc.translatePath(__addon__.getAddonInfo('path')).decode('utf-8')
-__servericon__          = os.path.join(__addonpath__, 'resources', 'media', 'ServerIcon.png')
 __settings__            = xbmcaddon.Addon(id="script.skinhelper.ping")
 WINDOW = xbmcgui.Window(10000)
 
@@ -73,9 +72,7 @@ class MyAddon:
             WINDOW.setProperty("SkinHelperPING.servername3",str(__settings__.getSetting("name3")))
             WINDOW.setProperty("SkinHelperPING.servername4",str(__settings__.getSetting("name4")))
             WINDOW.setProperty("SkinHelperPING.servername5",str(__settings__.getSetting("name5")))
-         
-            xbmc.log("use icon: %s" % __servericon__, level=xbmc.LOGDEBUG)
-            WINDOW.setProperty("SkinHelperPING.icon", __servericon__)
+
 
          except Exception as msg:
              xbmc.log("PING Helper:" + str(msg) , level=xbmc.LOGNOTICE)
