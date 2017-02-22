@@ -74,6 +74,7 @@ class MyAddon:
             WINDOW.setProperty("SkinHelperPING.servername4",str(__settings__.getSetting("name4")))
             WINDOW.setProperty("SkinHelperPING.servername5",str(__settings__.getSetting("name5")))
          
+            xbmc.log("use icon: %s" % __servericon__, level=xbmc.LOGDEBUG)
             WINDOW.setProperty("SkinHelperPING.icon", __servericon__)
 
          except Exception as msg:
